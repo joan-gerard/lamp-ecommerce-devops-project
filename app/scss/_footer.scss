@@ -1,0 +1,71 @@
+@use 'variables' as *;
+
+.footer_area {
+    background: $heading;
+    position: relative;
+    overflow: hidden;
+    z-index: 3;
+    padding: 56px 24px 0;
+
+    .footer-grid {
+        max-width: 1200px;
+        margin: 0 auto 40px;
+        display: grid;
+        grid-template-columns: 1.4fr 1fr 1fr;
+        gap: 40px;
+    }
+
+    .footer-brand {
+        .brand-name {
+            font: 800 20px/1 $display;
+            color: #fff;
+            letter-spacing: -0.03em;
+            display: inline-block;
+            margin-bottom: 12px;
+
+            span {
+                color: $accent;
+            }
+        }
+
+        p {
+            font: 400 14px/1.7 $body;
+            color: $muted;
+            max-width: 280px;
+        }
+    }
+
+    .footer-col {
+        h5 {
+            font: 600 13px $display;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 16px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+
+            a {
+                font: 400 14px $body;
+                color: $muted;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .copy_right_area {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+        .copy_right {
+            font: 400 13px/56px $body;
+            color: #71717a;
+            text-align: center;
+            margin: 0;
+        }
+    }
+}

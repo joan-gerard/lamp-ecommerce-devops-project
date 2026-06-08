@@ -1,0 +1,184 @@
+@use 'variables' as *;
+
+.products-section {
+    padding: 96px 24px 80px;
+    background: $surface;
+
+    .section-header {
+        max-width: 1200px;
+        margin: 0 auto 48px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 24px;
+        flex-wrap: wrap;
+    }
+
+    .check_tittle {
+        text-align: left;
+
+        h4 {
+            font: 600 12px $body;
+            color: $hover;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+        }
+
+        h2 {
+            text-align: left;
+            font: 800 36px/1.15 $display;
+            color: $heading;
+            padding-top: 10px;
+            letter-spacing: -0.03em;
+
+            &:after {
+                display: none;
+            }
+        }
+    }
+
+    .section-meta {
+        font: 400 14px $body;
+        color: $h6;
+        max-width: 280px;
+        line-height: 1.6;
+    }
+
+    .it_works {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 24px;
+        padding-top: 0;
+
+        > [class*="col-"] {
+            width: 100%;
+            float: none;
+            padding: 0;
+        }
+
+        .product-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid $border;
+            @include transition;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+
+            &:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 20px 40px rgba(9, 9, 11, 0.08);
+                border-color: rgba(99, 102, 241, 0.2);
+
+                .product-card__media img {
+                    transform: scale(1.05);
+                }
+            }
+
+            .product-card__media {
+                position: relative;
+                overflow: hidden;
+                aspect-ratio: 4 / 3;
+                background: linear-gradient(135deg, #f4f4f5 0%, #fafafa 100%);
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border: none;
+                box-shadow: none;
+                @include transition(transform, 400ms);
+            }
+
+            .product-info {
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+                gap: 8px;
+
+                .product-name {
+                    margin: 0;
+                    font: inherit;
+
+                    a {
+                        font: 600 16px/1.4 $display;
+                        color: $heading;
+                        display: block;
+
+                        &:hover,
+                        &:focus {
+                            color: $hover;
+                        }
+                    }
+                }
+
+                .product-desc {
+                    font: 400 13px/1.5 $body;
+                    color: $h6;
+                    margin: 0;
+                    flex: 1;
+                }
+
+                .product-footer {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 12px;
+                    padding-top: 8px;
+                    margin-top: auto;
+                }
+
+                .product-price {
+                    font: 700 22px/1 $display;
+                    color: $heading;
+                    letter-spacing: -0.02em;
+                }
+
+                .product-btn {
+                    font: 600 13px $body;
+                    color: $hover;
+                    background: rgba(99, 102, 241, 0.08);
+                    border: 1px solid rgba(99, 102, 241, 0.15);
+                    border-radius: 999px;
+                    padding: 8px 14px;
+                    cursor: pointer;
+                    white-space: nowrap;
+
+                    &:hover {
+                        background: $hover;
+                        color: #fff;
+                        border-color: $hover;
+                    }
+                }
+            }
+        }
+    }
+
+    .error-content {
+        grid-column: 1 / -1;
+        text-align: center;
+        padding: 48px 24px;
+        background: #fff;
+        border-radius: 16px;
+        border: 1px solid #fecaca;
+        max-width: 600px;
+        margin: 0 auto;
+
+        h1 {
+            font: 600 24px $display;
+            color: #b91c1c;
+            margin-bottom: 12px;
+        }
+
+        p {
+            font: 400 15px $body;
+            color: $h6;
+        }
+    }
+}

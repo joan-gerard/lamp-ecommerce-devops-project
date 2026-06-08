@@ -1,0 +1,748 @@
+/*----------------------------------------------------
+  NovaMart storefront styles
+---------------------------------------------------- */
+/* Variables
+============================================================================================ */
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap");
+/* Color Variables
+============================================================================================ */
+/* Transition Mixins
+============================================================================================ */
+/* Placeholder Mixins
+============================================================================================ */
+/*----------------------------------------------------
+  NovaMart storefront styles
+---------------------------------------------------- */
+@media (min-width: 1260px) {
+  .custom-container {
+    max-width: 1200px;
+    min-width: auto;
+    margin: 0 auto;
+  }
+}
+.sub-container {
+  padding: 0 24px;
+}
+
+.m0 {
+  margin: 0;
+}
+
+.p0 {
+  padding: 0;
+}
+
+.row.m0 {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background: #fff;
+  color: #52525b;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  margin: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+body p {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  line-height: 1.6;
+  color: #52525b;
+  margin: 0;
+}
+body section.row, body header.row, body footer.row {
+  margin: 0;
+}
+
+a, .btn, button {
+  outline: none;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+a:before, a:after, .btn:before, .btn:after, button:before, button:after {
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
+  outline: none;
+  text-decoration: none;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.check_tittle {
+  text-align: center;
+  display: block;
+}
+.check_tittle h4 {
+  font: 600 12px "Plus Jakarta Sans", sans-serif;
+  color: #6366f1;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+.check_tittle h2 {
+  text-align: center;
+  font: 800 36px "Plus Jakarta Sans", sans-serif;
+  color: #09090b;
+  padding-top: 10px;
+  letter-spacing: -0.03em;
+  position: relative;
+}
+.check_tittle h2:after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 4px;
+  background: #6366f1;
+  border-radius: 999px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -24px;
+}
+
+/*----------------------------------------------------
+  NovaMart storefront styles
+---------------------------------------------------- */
+.navbar.navbar-default {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: none;
+  border-bottom: 1px solid rgba(228, 228, 231, 0.8);
+  width: 100%;
+  margin: 0;
+  border-radius: 0;
+  min-height: 72px;
+}
+.navbar.navbar-default .searchForm {
+  height: 0;
+  border-bottom: 1px solid transparent;
+  overflow: hidden;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.navbar.navbar-default .searchForm .input-group {
+  max-width: 560px;
+  margin: 0 auto;
+}
+.navbar.navbar-default .searchForm .input-group-addon {
+  border-radius: 12px 0 0 12px;
+  border: 1px solid #e4e4e7;
+  border-right: none;
+  font-size: 18px;
+  padding: 0 20px;
+  background: #fafafa;
+  color: #6366f1;
+  cursor: pointer;
+}
+.navbar.navbar-default .searchForm .form-control {
+  height: 56px;
+  padding: 0 16px;
+  border-radius: 0 12px 12px 0;
+  border: 1px solid #e4e4e7;
+  border-left: none;
+  background: #fafafa;
+  text-align: left;
+  font: 400 15px "Plus Jakarta Sans", sans-serif;
+  color: #09090b;
+  box-shadow: none;
+}
+.navbar.navbar-default .searchForm .form-control.placeholder {
+  color: #a1a1aa;
+}
+.navbar.navbar-default .searchForm .form-control:-moz-placeholder {
+  color: #a1a1aa;
+}
+.navbar.navbar-default .searchForm .form-control::-moz-placeholder {
+  color: #a1a1aa;
+}
+.navbar.navbar-default .searchForm .form-control::-webkit-input-placeholder {
+  color: #a1a1aa;
+}
+.navbar.navbar-default .searchForm .form-control:focus {
+  border-color: #818cf8;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+.navbar.navbar-default .show {
+  height: 72px;
+  padding: 8px 24px;
+  border-bottom-color: #e4e4e7;
+}
+.navbar.navbar-default .container {
+  max-width: 1200px;
+}
+.navbar.navbar-default .navbar-header .navbar-brand {
+  padding-top: 22px;
+}
+.navbar.navbar-default .navbar-header .navbar-brand.brand-text {
+  padding-top: 24px;
+}
+.navbar.navbar-default .navbar-header .navbar-brand.brand-text .brand-name {
+  font: 800 22px/1 "Plus Jakarta Sans", sans-serif;
+  color: #09090b;
+  letter-spacing: -0.04em;
+}
+.navbar.navbar-default .navbar-header .navbar-brand.brand-text .brand-name span {
+  color: #6366f1;
+}
+.navbar.navbar-default .main_nav {
+  float: none;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding-top: 12px;
+}
+.navbar.navbar-default .main_nav li {
+  display: inline-block;
+  float: none;
+}
+.navbar.navbar-default .main_nav li a {
+  padding: 8px 14px;
+  display: block;
+  line-height: 1.4;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  background: transparent;
+  color: #52525b;
+  border-radius: 999px;
+}
+.navbar.navbar-default .main_nav li a:hover, .navbar.navbar-default .main_nav li a:focus {
+  color: #09090b;
+  background: #fafafa;
+}
+.navbar.navbar-default .main_nav li:first-child a {
+  padding-left: 14px;
+}
+.navbar.navbar-default .navbar-nav.navbar-right {
+  margin-right: 0 !important;
+  padding-top: 12px;
+}
+.navbar.navbar-default .navbar-nav.navbar-right li a {
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #fafafa;
+  border: 1px solid #e4e4e7;
+  color: #09090b;
+}
+.navbar.navbar-default .navbar-nav.navbar-right li a:hover, .navbar.navbar-default .navbar-nav.navbar-right li a:focus {
+  color: #6366f1;
+  border-color: rgba(99, 102, 241, 0.35);
+  background: rgba(99, 102, 241, 0.08);
+}
+.navbar.navbar-default .navbar-nav.navbar-right li a i {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.menu_bg {
+  background: rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 4px 24px rgba(9, 9, 11, 0.06);
+  z-index: 9999 !important;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+.menu_bg .navbar-header .navbar-brand.brand-text .brand-name {
+  color: #09090b;
+}
+.menu_bg .main_nav li a {
+  color: #52525b !important;
+}
+.menu_bg .navbar-nav.navbar-right li a {
+  color: #09090b !important;
+}
+
+/*----------------------------------------------------
+  NovaMart storefront styles
+---------------------------------------------------- */
+.slider_area {
+  background: #09090b;
+  position: relative;
+  overflow: hidden;
+}
+.slider_area:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(99, 102, 241, 0.45) 0%, transparent 60%), radial-gradient(circle at 90% 80%, rgba(129, 140, 248, 0.2) 0%, transparent 40%), linear-gradient(180deg, #18181b 0%, #09090b 100%);
+  pointer-events: none;
+}
+.slider_area:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+  pointer-events: none;
+}
+.slider_area .slider_inner {
+  position: relative;
+  height: auto;
+  min-height: 520px;
+  padding: 120px 24px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider_area .slider_inner .camera_caption {
+  text-align: center;
+  position: relative;
+  max-width: 760px;
+  z-index: 1;
+}
+.slider_area .slider_inner .camera_caption .hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px 6px 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #d4d4d8;
+  font: 500 13px "Plus Jakarta Sans", sans-serif;
+  margin-bottom: 28px;
+}
+.slider_area .slider_inner .camera_caption .hero-badge:before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.6);
+}
+.slider_area .slider_inner .camera_caption h2 {
+  font: 800 clamp(40px, 6vw, 64px)/1.05 "Plus Jakarta Sans", sans-serif;
+  color: #fff;
+  letter-spacing: -0.04em;
+  margin: 0 auto 20px;
+}
+.slider_area .slider_inner .camera_caption h5 {
+  font: 400 18px/1.7 "Plus Jakarta Sans", sans-serif;
+  color: #a1a1aa;
+  padding: 0;
+  max-width: 560px;
+  margin: 0 auto 36px;
+}
+.slider_area .slider_inner .camera_caption .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+.slider_area .slider_inner .camera_caption .learn_mor {
+  text-transform: none;
+  color: #fff;
+  font: 600 15px/1 "Plus Jakarta Sans", sans-serif;
+  padding: 16px 28px;
+  border-radius: 12px;
+  background: #6366f1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.35);
+}
+.slider_area .slider_inner .camera_caption .learn_mor:hover, .slider_area .slider_inner .camera_caption .learn_mor:focus {
+  background: rgb(117.72, 120.36, 242.68);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px rgba(99, 102, 241, 0.4);
+}
+.slider_area .slider_inner .camera_caption .learn_mor--ghost {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: none;
+}
+.slider_area .slider_inner .camera_caption .learn_mor--ghost:hover, .slider_area .slider_inner .camera_caption .learn_mor--ghost:focus {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/*----------------------------------------------------
+  NovaMart storefront styles
+---------------------------------------------------- */
+.features-bar {
+  background: #fff;
+  border-bottom: 1px solid #e4e4e7;
+  padding: 28px 24px;
+}
+.features-bar .features-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.features-bar .feature {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  justify-content: center;
+  text-align: left;
+}
+.features-bar .feature i {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(99, 102, 241, 0.08);
+  color: #6366f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+.features-bar .feature strong {
+  display: block;
+  font: 600 14px "Plus Jakarta Sans", sans-serif;
+  color: #09090b;
+  margin-bottom: 2px;
+}
+.features-bar .feature span {
+  font: 400 13px "Plus Jakarta Sans", sans-serif;
+  color: #71717a;
+}
+
+/*----------------------------------------------------
+  NovaMart storefront styles
+---------------------------------------------------- */
+.products-section {
+  padding: 96px 24px 80px;
+  background: #fafafa;
+}
+.products-section .section-header {
+  max-width: 1200px;
+  margin: 0 auto 48px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.products-section .check_tittle {
+  text-align: left;
+}
+.products-section .check_tittle h4 {
+  font: 600 12px "Plus Jakarta Sans", sans-serif;
+  color: #6366f1;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+.products-section .check_tittle h2 {
+  text-align: left;
+  font: 800 36px/1.15 "Plus Jakarta Sans", sans-serif;
+  color: #09090b;
+  padding-top: 10px;
+  letter-spacing: -0.03em;
+}
+.products-section .check_tittle h2:after {
+  display: none;
+}
+.products-section .section-meta {
+  font: 400 14px "Plus Jakarta Sans", sans-serif;
+  color: #71717a;
+  max-width: 280px;
+  line-height: 1.6;
+}
+.products-section .it_works {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+  padding-top: 0;
+}
+.products-section .it_works > [class*=col-] {
+  width: 100%;
+  float: none;
+  padding: 0;
+}
+.products-section .it_works .product-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #e4e4e7;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.products-section .it_works .product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(9, 9, 11, 0.08);
+  border-color: rgba(99, 102, 241, 0.2);
+}
+.products-section .it_works .product-card:hover .product-card__media img {
+  transform: scale(1.05);
+}
+.products-section .it_works .product-card .product-card__media {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  background: linear-gradient(135deg, #f4f4f5 0%, #fafafa 100%);
+}
+.products-section .it_works .product-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none;
+  box-shadow: none;
+  transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+.products-section .it_works .product-card .product-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 8px;
+}
+.products-section .it_works .product-card .product-info .product-name {
+  margin: 0;
+  font: inherit;
+}
+.products-section .it_works .product-card .product-info .product-name a {
+  font: 600 16px/1.4 "Plus Jakarta Sans", sans-serif;
+  color: #09090b;
+  display: block;
+}
+.products-section .it_works .product-card .product-info .product-name a:hover, .products-section .it_works .product-card .product-info .product-name a:focus {
+  color: #6366f1;
+}
+.products-section .it_works .product-card .product-info .product-desc {
+  font: 400 13px/1.5 "Plus Jakarta Sans", sans-serif;
+  color: #71717a;
+  margin: 0;
+  flex: 1;
+}
+.products-section .it_works .product-card .product-info .product-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 8px;
+  margin-top: auto;
+}
+.products-section .it_works .product-card .product-info .product-price {
+  font: 700 22px/1 "Plus Jakarta Sans", sans-serif;
+  color: #09090b;
+  letter-spacing: -0.02em;
+}
+.products-section .it_works .product-card .product-info .product-btn {
+  font: 600 13px "Plus Jakarta Sans", sans-serif;
+  color: #6366f1;
+  background: rgba(99, 102, 241, 0.08);
+  border: 1px solid rgba(99, 102, 241, 0.15);
+  border-radius: 999px;
+  padding: 8px 14px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.products-section .it_works .product-card .product-info .product-btn:hover {
+  background: #6366f1;
+  color: #fff;
+  border-color: #6366f1;
+}
+.products-section .error-content {
+  grid-column: 1/-1;
+  text-align: center;
+  padding: 48px 24px;
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #fecaca;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.products-section .error-content h1 {
+  font: 600 24px "Plus Jakarta Sans", sans-serif;
+  color: #b91c1c;
+  margin-bottom: 12px;
+}
+.products-section .error-content p {
+  font: 400 15px "Plus Jakarta Sans", sans-serif;
+  color: #71717a;
+}
+
+/*----------------------------------------------------
+  NovaMart storefront styles
+---------------------------------------------------- */
+.footer_area {
+  background: #09090b;
+  position: relative;
+  overflow: hidden;
+  z-index: 3;
+  padding: 56px 24px 0;
+}
+.footer_area .footer-grid {
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 40px;
+}
+.footer_area .footer-brand .brand-name {
+  font: 800 20px/1 "Plus Jakarta Sans", sans-serif;
+  color: #fff;
+  letter-spacing: -0.03em;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+.footer_area .footer-brand .brand-name span {
+  color: #818cf8;
+}
+.footer_area .footer-brand p {
+  font: 400 14px/1.7 "Plus Jakarta Sans", sans-serif;
+  color: #a1a1aa;
+  max-width: 280px;
+}
+.footer_area .footer-col h5 {
+  font: 600 13px "Plus Jakarta Sans", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+}
+.footer_area .footer-col ul li {
+  margin-bottom: 10px;
+}
+.footer_area .footer-col ul li a {
+  font: 400 14px "Plus Jakarta Sans", sans-serif;
+  color: #a1a1aa;
+}
+.footer_area .footer-col ul li a:hover {
+  color: #fff;
+}
+.footer_area .copy_right_area {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+.footer_area .copy_right_area .copy_right {
+  font: 400 13px/56px "Plus Jakarta Sans", sans-serif;
+  color: #71717a;
+  text-align: center;
+  margin: 0;
+}
+
+/*----------------------------------------------------
+  NovaMart storefront styles
+---------------------------------------------------- */
+@media (max-width: 1199px) {
+  .products-section .it_works .product-card .product-info {
+    padding: 16px;
+  }
+}
+@media (max-width: 991px) {
+  .features-bar .features-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .features-bar .feature {
+    justify-content: flex-start;
+  }
+  .products-section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .products-section .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .products-section .it_works {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+  .footer_area .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .navbar-default .navbar-toggle {
+    margin-top: 22px;
+    margin-bottom: 16px;
+  }
+  .navbar-default .navbar-collapse,
+  .navbar-default .navbar-form {
+    background: #fff;
+  }
+  .navbar.navbar-default .main_nav {
+    padding-top: 0;
+    display: block;
+  }
+  .navbar.navbar-default .main_nav li {
+    display: block;
+  }
+  .navbar.navbar-default .main_nav li:first-child a {
+    padding-left: 20px;
+  }
+  .navbar.navbar-default .main_nav li a {
+    color: #09090b;
+    text-align: left;
+    padding: 10px 20px;
+    line-height: 1.4;
+    border-radius: 8px;
+  }
+  .navbar.navbar-default .navbar-right {
+    padding-top: 0 !important;
+    margin: 0;
+    border: 0;
+  }
+  .navbar.navbar-default .navbar-right li a {
+    width: auto;
+    height: auto;
+    border: none;
+    background: transparent;
+    padding: 10px 20px;
+  }
+  .navbar.navbar-default .navbar-right li a i {
+    color: #09090b;
+    padding-left: 0;
+    line-height: 1 !important;
+  }
+}
+@media (max-width: 767px) {
+  .slider_area .slider_inner {
+    min-height: 420px;
+    padding: 96px 20px 56px;
+  }
+  .slider_area .slider_inner .camera_caption h2 {
+    font-size: clamp(28px, 8vw, 36px);
+  }
+  .slider_area .slider_inner .camera_caption h5 {
+    font-size: 16px;
+    padding-top: 16px;
+    padding-bottom: 28px;
+  }
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hero-actions .learn_mor {
+    width: 100%;
+  }
+  .check_tittle h2 {
+    font-size: 28px;
+  }
+  .products-section .it_works {
+    grid-template-columns: 1fr;
+  }
+  .footer_area .copy_right_area .copy_right {
+    line-height: 1.6;
+    padding: 20px 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

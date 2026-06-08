@@ -1,0 +1,48 @@
+@use 'variables' as *;
+
+.features-bar {
+    background: #fff;
+    border-bottom: 1px solid $border;
+    padding: 28px 24px;
+
+    .features-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+
+    .feature {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        justify-content: center;
+        text-align: left;
+
+        i {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: rgba(99, 102, 241, 0.08);
+            color: $hover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        strong {
+            display: block;
+            font: 600 14px $display;
+            color: $heading;
+            margin-bottom: 2px;
+        }
+
+        span {
+            font: 400 13px $body;
+            color: $h6;
+        }
+    }
+}
