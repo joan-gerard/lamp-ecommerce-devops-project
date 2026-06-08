@@ -1,6 +1,6 @@
 # LAMP Stack eCommerce Deployment
 
-A LAMP stack deployment project based on the KodeKloud Shell Scripts for Beginners course.
+A automated LAMP stack deployment on Ubuntu, provisioned inside a local Lima VM to simulate a real server environment.
 
 ## Stack
 
@@ -22,9 +22,8 @@ Deploys a fictional electronics eCommerce storefront backed by a MariaDB databas
 ### Run the setup script
 
 ```bash
-git clone https://github.com/kodekloudhub/learning-app-ecommerce.git /tmp/learning-app-ecommerce
-git clone https://github.com/YOUR_USERNAME/lamp-ecommerce.git
-cd lamp-ecommerce
+git clone https://github.com/joan-gerard/lamp-ecommerce-devops-project.git
+cd lamp-ecommerce-devops-project
 chmod +x setup.sh
 ./setup.sh
 ```
@@ -33,4 +32,4 @@ The app will be available at `http://localhost`.
 
 ## Notes
 
-The course uses CentOS but this project uses Ubuntu, which is more representative of modern cloud server environments. The LAMP stack setup is identical — only the package manager and service names differ.
+Ubuntu was chosen over CentOS as it is more representative of modern cloud server environments. The LAMP stack setup is identical across both distributions — only the package manager and service names differ.
