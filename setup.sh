@@ -23,17 +23,17 @@ sudo mariadb -e "FLUSH PRIVILEGES;"
 echo "==> Loading inventory data..."
 sudo mariadb < ./assets/db-load-script.sql
 
-echo "==> Cloning application files..."
-if [ ! -d "/tmp/learning-app-ecommerce" ]; then
-git clone https://github.com/kodekloudhub/learning-app-ecommerce.git /tmp/learning-app-ecommerce
-fi
-sudo cp -r /tmp/learning-app-ecommerce/* /var/www/html/
+echo "==> Deploying application files..."
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+sudo cp -r "$SCRIPT_DIR/app/." /var/www/html/
 
-echo "==> Configuring Apache environment variables..."
-echo 'export DB_HOST=localhost' | sudo tee -a /etc/apache2/envvars
-echo 'export DB_USER=ecomuser' | sudo tee -a /etc/apache2/envvars
-echo 'export DB_PASSWORD=ecompassword' | sudo tee -a /etc/apache2/envvars
-echo 'export DB_NAME=ecomdb' | sudo tee -a /etc/apache2/envvars
+echo "==> Creating application .env file..."
+sudo tee /var/www/html/.env > /dev/null <<EOF
+DB_HOST=localhost
+DB_USER=ecomuser
+DB_PASSWORD=ecompassword
+DB_NAME=ecomdb
+EOF
 
 echo "==> Configuring Apache to serve index.php first..."
 sudo sed -i 's/DirectoryIndex index.html/DirectoryIndex index.php index.html/' /etc/apache2/mods-enabled/dir.conf
