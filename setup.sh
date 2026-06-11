@@ -14,6 +14,12 @@ sudo systemctl enable apache2
 sudo systemctl start mariadb
 sudo systemctl enable mariadb
 
+echo "==> Configuring firewall..."
+sudo ufw allow OpenSSH
+sudo ufw allow 80/tcp
+sudo ufw allow 3306/tcp
+sudo ufw --force enable
+
 echo "==> Configuring MariaDB..."
 sudo mariadb -e "CREATE DATABASE IF NOT EXISTS ecomdb;"
 sudo mariadb -e "CREATE USER IF NOT EXISTS 'ecomuser'@'localhost' IDENTIFIED BY 'ecompassword';"
